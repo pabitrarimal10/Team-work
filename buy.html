@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art mela</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .artworks {
+            display: grid;
+            margin: 5%;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .artworks {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 15px;
+            }
+
+            .art-item {
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .artworks {
+                grid-template-columns: 1fr;
+            }
+
+            .art-item img {
+                aspect-ratio: 1/1;
+
+            }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<a href="index.html">
+    <script src="https://kit.fontawesome.com/c56834982a.js" crossorigin="anonymous">
+    </script>
+</a>
+
+<body class="bg-white text-gray-800">
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="logo.jpg" style="width:100%;height:100%;">
+            </div>
+            <a href="index.html">
+                <img src="New .png" style="margin-top: 2.5%;"> </img>
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="artist.html">Artist</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="" style="width:255px;height:38px;">
+            </div>
+
+            <div class="icons">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <a href="index.html"><span class="cart-count">🛒</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>></span>
+        <a href="buy.html">Buy</a>
+    </div>
+    <ul class="space-y-3 mb-6">
+        <li class="flex justify-between items-center text-gray-600 hover:text-black cursor-pointer">Hall
+            <span>&gt;</span>
+        </li>
+        <li class="flex justify-between items-center text-gray-600 hover:text-black cursor-pointer">
+            Office
+            <span>&gt;</span>
+        </li>
+        <li class="flex justify-between items-center text-gray-600 hover:text-black cursor-pointer">
+            House
+            <span>&gt;</span>
+        </li>
+        <li class="flex justify-between items-center text-gray-600 hover:text-black cursor-pointer">Gift
+            <span>&gt;</span>
+        </li>
+    </ul>
+
+    <div class="border-t pt-4">
+        <div class="flex justify-between items-center mb-2">
+            <h3 class="font-semibold">Price</h3>
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transform rotate-180" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 01.02-1.06z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="flex items-center space-x-2 mb-4">
+            <span>Rs.500</span>
+            <input type="range" min="500" max="20000" value="5000" class="w-full accent-black" />
+            <span>Rs.20000</span>
+        </div>
+
+        <button class="w-full bg-gray-400 text-white rounded-full py-2 font-semibold hover:bg-gray-500 transition"
+            style="width:150px; text-align: center; margin-left: 720px; height: 50px;">
+            Apply Filter
+        </button>
+    </div>
+    </div>
+    </div>
+
+    <div class="contar">
+        <div class="section-title">Paintings</div>
+        <div class="artworks">
+            <div class="art-item">
+                <img src="faded skinny man.jpg" style="width:100%; height:200px; overflow: hidden;">
+                <div class="artwork-card">
+                    <div class="artwork-title">Faded Skinny Man</div>
+                    <div class="rating">★★★★ 4.5/5</div>
+                    <div class="price">Rs.13500 <span class="original-price">Rs.18000</span></div>
+                    <a href="FadedSkinnyMan.html">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="art-item">
+                <img src="courage lady.jpg" style="width:100%; height:200px; overflow: hidden;">
+                <div class="artwork-card">
+                    <div class="artwork-title">Courage Lady</div>
+                    <div class="rating">★★★★ 4.0/5</div>
+                    <div class="price">Rs.14500</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="art-item">
+                <img src="a bermuda.jpg" style="width:100%; height:200px; overflow: hidden;">
+                <div class="artwork-card">
+                    <div class="artwork-title">A Bermuda</div>
+                    <div class="rating">★★★ 3.0/5</div>
+                    <div class="price">Rs.8000</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="art-item">
+                <img src="naina devi.jpg" style="width:100%; height:200px; overflow: hidden;">
+                <div class="artwork-card">
+                    <div class="artwork-title">Naina Devi</div>
+                    <div class="rating">★★★★★ 5.0/5</div>
+                    <div class="price">Rs.15000</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="art-item">
+                <img src="the sakes.jpg" style="width:100%; height:200px; overflow: hidden;">
+                <div class="artwork-card">
+                    <div class="artwork-title">The Sakas</div>
+                    <div class="rating">★★★★★ 4.5/5</div>
+                    <div class="price">Rs.8000</div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="art-item">
+                <img src="story to tell.jpg" style="width:100%; height:200px; overflow: hidden;">
+                <div class="artwork-card">
+                    <div class="artwork-title">Story to tell</div>
+                    <div class="rating">★★★★ 3.5/5</div>
+                    <div class="price">Rs.15000 <span class="original-price">Rs.19000</span></div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="newsletter">
+        <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+        <br />
+        <input type="email" placeholder="Enter your email address" style="width:200px;height: 48px;"><br/>
+        <button style="height: 50px; width: 200px; margin:1%;">
+            <p style="font-size:14px;">Subscribe to Newsletter</p>
+        </button>
+    </div>
+    <footer>
+        <div class="footer-section">
+            <h4 style="margin:5px;">The Art Mela</h4>
+            <p>Explore our diverse collection of thoughtfully curated artworks, each piece designed to celebrate
+                your
+                individuality and resonate with your unique sense of style.</p>
+        </div>
+        <div class="footer-section" style="text-align: center;">
+            <h4>PAGES</h4>
+            <a href="#">Buy</a>
+            <a href="#">Sell</a>
+            <a href="#">Artist</a>
+        </div>
+    
+        <div class="footer-section" style="text-align: center;">
+            <h4>HELP</h4>
+            <a href="#">Customer Support</a>
+            <a href="#">Delivery Details</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    
+        <div class="footer-section" style="text-align:center">
+            <h4>FAQ</h4>
+            <a href="#">Account</a>
+            <a href="#">Manage Deliveries</a>
+            <a href="#">Orders</a>
+            <a href="#">Payments</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="instagram.jpg" alt="Twitter"></a>
+            <a href="#"><img src="fb.jpg" alt="Facebook"></a>
+            <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+            <a href="#"><img src="githubsymbol.jpg" alt="Github"></a>
+        </div>
+    </footer>
+    <div class="footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <p>The Art Mela © 2024-2025, All Rights Reserved</p>
+        </div>
+        <div class="payment-icons">
+            <img src="esewa.jpg" alt="eSewa" class="payment-img">
+            <img src="khalti.jpg" alt="khalti" class="payment-img">
+        </div>
+    </div>
+    </body>
+    
+    </html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art mela</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .right-section {
+        flex: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cart-item {
+        flex-direction: column;
+      }
+
+      .actions {
+        flex-direction: row;
+        width: 100%;
+        margin-top: 15px;
+      }
+
+      .cart-item img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+      }
+
+      .promo {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .page-wrapper {
+        padding: 10px;
+      }
+
+      .top-section h1 {
+        font-size: 1.5rem;
+      }
+
+      .qty button {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  </style>
+</head>
+<script src="https://kit.fontawesome.com/c56834982a.js" crossorigin="anonymous"></script>
+
+<body>
+  <header>
+    <div class="logo-container">
+      <div class="logo">
+        <img src="logo.jpg" style="width:100%;height:100%;">
+      </div>
+      <a href="index.html">
+        <img src="New .png" style="margin-top: 2.5%;"> </img>
+      </a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="buy.html">Buy</a></li>
+        <li><a href="sell.html">Sell</a></li>
+        <li><a href="artist.html">Artist</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="">
+      </div>
+
+      <div class="icons">
+        <div class="icon">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="icon">
+          <i class="fas fa-shopping-cart"></i>
+          <a href="index.html"><span class="cart-count">🛒</span></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <span>></span>
+    <a href="cart.html">Cart</a>
+  </div>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <div class="top-section">
+        <h1>Your cart</h1>
+      </div>
+
+      <div class="container">
+        <div class="left-section">
+          <div class="cart-item">
+            <img src="faded skinny man.jpg" alt="Faded Skinny Man">
+            <div class="item-info">
+              <h3>Faded Skinny Man</h3>
+              <p>Artist: Ramesh Khatiwada</p>
+              <p>Size: 1 ft. by 1 ft.</p>
+              <div class="rating">
+                <span>⭐ ⭐ ⭐ ⭐ ⭐</span><span>4.5/5</span>
+              </div>
+              <h2>Rs.13500</h2>
+            </div>
+            <div class="actions">
+              <button class="delete">🗑</button>
+              <div class="qty">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cart-item">
+            <img src="courage lady.jpg" alt="Courage Lady">
+            <div class="item-info">
+              <h3>Courage Lady</h3>
+              <p>Artist: Krishna Oli</p>
+              <p>Size: 1.7 ft. by 3 ft.</p>
+              <div class="rating">
+                <span>⭐ ⭐ ⭐ ⭐</span><span>4.0/5</span>
+              </div>
+              <h2>Rs.14500</h2>
+            </div>
+            <div class="actions">
+              <button class="delete">🗑</button>
+              <div class="qty">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-section">
+          <h3>Order Summary</h3>
+          <div class="summary-line">
+            <span>Subtotal</span>
+            <strong>Rs.13,500</strong>
+          </div>
+          <div class="summary-line">
+            <span>Discount (-0%)</span>
+            <strong class="red">-Rs.0</strong>
+          </div>
+          <div class="summary-line">
+            <span>Delivery Fee</span>
+            <strong>Rs.15</strong>
+          </div>
+          <div class="summary-line total">
+            <span>Total</span>
+            <strong>Rs.13,515</strong>
+          </div>
+
+          <input type="text" placeholder="Phone Number">
+          <input type="text" placeholder="Address">
+          <div class="promo">
+            <input type="text" placeholder="Add promo code">
+            <button>Apply</button>
+          </div>
+          <a href="login.html">
+            <button class="checkout">Go to Checkout →</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="newsletter">
+      <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+      <br />
+      <input type="email" placeholder="Enter your email address" style="width:200px;height: 30px;"><br />
+      <br /><button style="height: 50px; width: 200px;">
+        <p style="font-size:14px;">Subscribe to Newsletter</p>
+      </button>
+    </div>
+    <footer>
+      <div class="footer-section">
+        <h4 style="margin:5px;">The Art Mela</h4>
+        <p>Explore our diverse collection of thoughtfully curated artworks, each piece designed to celebrate your
+          individuality and resonate with your unique sense of style.</p>
+      </div>
+      <div class="footer-section" style="text-align:center;">
+        <h4>PAGES</h4>
+        <a href="#">Buy</a>
+        <a href="#">Sell</a>
+        <a href="#">Artist</a>
+      </div>
+
+      <div class="footer-section" style="text-align: center;">
+        <h4>HELP</h4>
+        <a href="#">Customer Support</a>
+        <a href="#">Delivery Details</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+      <div class="footer-section" style="text-align: center;">
+        <h4>FAQ</h4>
+        <a href="#">Account</a>
+        <a href="#">Manage Deliveries</a>
+        <a href="#">Orders</a>
+        <a href="#">Payments</a>
+      </div>
+      <div class="social-icons">
+        <a href="#"><img src="instagram.jpg" alt="Twitter"></a>
+        <a href="#"><img src="fb.jpg" alt="Facebook"></a>
+        <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+        <a href="#"><img src="githubsymbol.jpg" alt="Github"></a>
+      </div>
+    </footer>
+
+    <div class="footer" style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <p>The Art Mela © 2024-2025, All Rights Reserved</p>
+      </div>
+      <div class="payment-icons">
+        <img src="esewa.jpg" alt="eSewa" class="payment-img">
+        <img src="khalti.jpg" alt="khalti" class="payment-img">
+      </div>
+    </div>
+  </body>
+
+  </html>

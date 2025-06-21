@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art sell</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .upload-label {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .upload-desc {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .upload-section {
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .upload-section a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .upload-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .or-divider {
+            text-align: center;
+            margin: 15px 0;
+            color: #888;
+        }
+
+        .url-divider {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .file-preview {
+            margin: 10px 0 20px 0;
+            padding: 14px 24px;
+            font-size: 14px;
+            color: #333;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            width: 103.6%;
+            box-sizing: border-box;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .submit-button {
+            background-color: black;
+            color: white;
+            padding: 14px 24px;
+            font-size: 16px;
+            width: 100%;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #333;
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<script src="https://kit.fontawesome.com/c56834982a.js" crossorigin="anonymous"></script>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="logo.jpg" style="width:100%;height:100%;">
+            </div>
+            <a href="index.html">
+                <img src="New .png" style="margin-top: 2.5%;"> </img>
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="artist.html">Artist</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="" style="width:225px;height:8px;">
+            </div>
+
+            <div class="icons">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <a href="index.html"><span class="cart-count">🛒</span></a>
+                </div>
+            </div>
+    </header>
+    <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>></span>
+        <a href="artist sell.html">Artist Sell</a>
+    </div>
+
+    <h1>Sell Your Arts</h1>
+
+    <div class="container">
+        <p class="upload-label">Photo of your drawing</p>
+        <p class="upload-desc">Add your documents here, and you can upload up to 5 files max</p>
+        <div class="upload-section">
+            <p class="upload-icon">📁</p>
+            <p>Drag your file(s) or <a href="#">browse</a></p>
+        </div>
+        <p><small>Only support .jpg, .png, .svg and .zip files</small></p>
+
+        <div class="or-divider">OR</div>
+        <p class="url-divider">Upload from URL</p>
+
+        <input type="text" placeholder="Painting Name">
+        <input type="text" placeholder="Painting Description">
+        <input type="text" placeholder="Artist Name">
+
+        <p class="upload-label">Artist Photo</p>
+        <p class="upload-desc">Add your documents here, and you can upload up to 5 files max</p>
+        <div class="upload-section">
+            <p class="upload-icon">📁</p>
+            <p>Drag your file(s) or <a href="#">browse</a></p>
+            <p><small>Max 10 MB files are allowed</small></p>
+        </div>
+        <div class="file-preview">📎 filename.jpg <span style="font-size: 12px;">500kb</span></div>
+
+        <input type="text" placeholder="Artist Description">
+        <input type="number" placeholder="Age">
+        <input type="date" placeholder="Birth">
+        <input type="tel" placeholder="Phone">
+        <input type="email" placeholder="Mail">
+
+        <button class="submit-button">Send your data and painting for review →</button>
+    </div>
+
+    <div class="footer-note">
+        <p>Thank You for sending your painting, for your past work contact us through Mail
+            <strong>theartmela@gmail.com</strong>.
+        </p>
+        <p><strong>Note</strong> - We will review your file before post it to the site.</p>
+    </div>
+
+    <div class="newsletter">
+        <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+        <br />
+        <input type="email" placeholder="Enter your email address" style="width:200px;height: 30px;">
+        <br /><button style="height: 50px; width: 200px;">
+            <p style="font-size:14px;">Subscribe to Newsletter</p>
+        </button>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h4 style="margin:5px;">The Art Mela</h4>
+            <p>Explore our diverse collection of thoughtfully curated artworks, each piece designed to celebrate
+                your
+                individuality and resonate with your unique sense of style.</p>
+        </div>
+        <div class="footer-section" style="text-align: center;">
+            <h4>PAGES</h4>
+            <a href="#">Buy</a>
+            <a href="#">Sell</a>
+            <a href="#">Artist</a>
+        </div>
+
+        <div class="footer-section" style="text-align: center;">
+            <h4>HELP</h4>
+            <a href="#">Customer Support</a>
+            <a href="#">Delivery Details</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="footer-section" style="text-align: center;">
+            <h4>FAQ</h4>
+            <a href="#">Account</a>
+            <a href="#">Manage Deliveries</a>
+            <a href="#">Orders</a>
+            <a href="#">Payments</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="instagram.jpg" alt="Twitter"></a>
+            <a href="#"><img src="fb.jpg" alt="Facebook"></a>
+            <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+            <a href="#"><img src="githubsymbol.jpg" alt="Github"></a>
+        </div>
+    </footer>
+    <div class="footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <p>The Art Mela © 2024-2025, All Rights Reserved</p>
+        </div>
+        <div class="payment-icons">
+            <img src="esewa.jpg" alt="eSewa" class="payment-img">
+            <img src="khalti.jpg" alt="khalti" class="payment-img">
+        </div>
+    </div>
+</body>
+
+</html>

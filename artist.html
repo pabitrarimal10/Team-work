@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art mela</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            max-width: 1200px;
+            padding: 20px 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .filter-info {
+            display: flex;
+            justify-content: right;
+            text-align: center;
+            padding: 20px 20px;
+        }
+
+        .sort-options {
+            display: flex;
+            align-items: center;
+        }
+
+        .sort-options select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            position: relative;
+        }
+
+        .search-bar input {
+            padding: 10px 15px 10px 40px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            width: 200px;
+            transition: all 0.3s;
+
+        }
+
+        .search-bar input:focus {
+            width: 250px;
+            border-color: #6a5acd;
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777777;
+        }
+    </style>
+</head>
+<script src="https://kit.fontawesome.com/c56834982a.js" crossorigin="anonymous"></script>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="logo.jpg" style="width:100%;height:100%;">
+            </div>
+            <a href="index.html">
+                <img src="New .png" style="margin-top: 2.5%;"> </img>
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="artist.html">Artist</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="icons">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <a href="index.html"><span class="cart-count">🛒</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>></span>
+        <a href="artist.html">Artist</a>
+
+        <div class="contaier">
+            <h1 style="padding-top: 2%;">Artist of the Arts</h1>
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for the art you desire...">
+            </div>
+
+            <div class="filter-info">
+                <p style="padding-top: 0.6%; padding-right: 1%;">Showing 1-06 of 10 Art</p>
+                <div class="sort-options">
+                    <span>Sort by:</span>
+                    <select>
+                        <option>Most Popular</option>
+                        <option>Highest Rated</option>
+                        <option>Newest</option>
+                        <option>A-Z</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="artist-grid" style="margin-left: 5%; margin-right: 5%;">
+                <div class="artist-card">
+                    <img src="man.jpg" style="width:80%; height:200px; overflow: hidden;padding:40px;">
+                    <div class="artist-info">
+                        <h2 class="artist-name">Rahgir Parsad Bhattrai</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span> 4.5/5</span>
+                        </div>
+                        <p class="artist-bio">
+                            Rahgir is a passionate drawing artist known for his intricate pencil sketches and portrait
+                            work.
+                            Inspired by Nepali culture and nature, his art captures deep emotion and fine detail. His
+                            dedication
+                            to hand-drawn realism has earned him recognition among local art communities and online
+                            platforms.
+                        </p>
+                        <div class="artist-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Age:</span>
+                                <span>21 yrs.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Birth:</span>
+                                <span>Kathmandu</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Phone:</span>
+                                <span>9812345678</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Mail:</span>
+                                <span>rahgir@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="artist-card">
+                    <img src="women.jpg" style="width:80%; height:200px; overflow: hidden;padding:40px;">
+                    <div class="artist-info">
+                        <h2 class="artist-name">Aashma Tuladhar</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span> 4.0/5</span>
+                        </div>
+                        <p class="artist-bio">
+                            Aashma blends traditional Nepali motifs with modern brushwork, crafting visual stories
+                            rooted in
+                            Kathmandu's cultural soul. Her vibrant color palette draws from the city's festivals and
+                            folklore,
+                            evoking emotion and memory in each stroke. Aashma's work celebrates the intersection of
+                            heritage and imagination.
+                        </p>
+                        <div class="artist-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Age:</span>
+                                <span>25 yrs.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Birth:</span>
+                                <span>Biranangar</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Phone:</span>
+                                <span>9509873452</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Mail:</span>
+                                <span>aashma@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="artist-card">
+                    <img src="sandhya bista.jpg" style="width:80%; height:200px; overflow: hidden;padding:40px;">
+                    <div class="artist-info">
+                        <h2 class="artist-name">Sandhya Bista</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span> 5.0/5</span>
+                        </div>
+                        <p class="artist-bio">
+                            With a bold style and experimental edge, Sandhya reinterprets village life and urban chaos
+                            into
+                            abstract expressions. Her use of mixed media add depth to everyday stories. Inspired by
+                            childhood
+                            memories and social movements, her canvases speak in raw, emotional tones that linger in the
+                            viewer's mind.
+                        </p>
+                        <div class="artist-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Age:</span>
+                                <span>20 yrs.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Birth:</span>
+                                <span>Kathmandu</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Phone:</span>
+                                <span>97465258534</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Mail:</span>
+                                <span>bistiassandhya@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="artist-card">
+                    <img src="prabin rijal.jpg" style="width:80%; height:200px; overflow: hidden;padding:40px;">
+                    <div class="artist-info">
+                        <h2 class="artist-name">Prabin Rijal</h2>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span> 4.5/5</span>
+                        </div>
+                        <p class="artist-bio">
+                            Prabin's art captures the mysticism of the Himalayan through miniature forms and subtle
+                            textures.
+                            Influenced by Buddhist symbolism and natural landscapes, his paintings often explore
+                            silence, space,
+                            and stillness. A quiet observer or life, he paints with meditative intent, inviting viewers
+                            into serene visual journeys.
+                        </p>
+                        <div class="artist-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Age:</span>
+                                <span>25 yrs.</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Birth:</span>
+                                <span>Butwal</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Phone:</span>
+                                <span>9567948653</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Mail:</span>
+                                <span>parabinrijal@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="newsletter">
+                <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+                <br />
+                <input type="email" placeholder="Enter your email address" style="width:200px;height: 30px;"><br />
+                <br /><button style="height: 50px; width: 200px;">
+                    <p style="font-size:14px;">Subscribe to Newsletter</p>
+                </button>
+            </div>
+            <footer>
+                <div class="footer-section">
+                    <h4 style="margin:5px;">The Art Mela</h4>
+                    <p>Explore our diverse collection of thoughtfully curated artworks, each piece designed to celebrate
+                        your individuality and resonate with your unique sense of style.</p>
+                </div>
+                <div class="footer-section" style="text-align: center;">
+                    <h4>PAGES</h4>
+                    <a href="#">Buy</a>
+                    <a href="#">Sell</a>
+                    <a href="#">Artist</a>
+                </div>
+
+                <div class="footer-section" style="text-align: center;">
+                    <h4>HELP</h4>
+                    <a href="#">Customer Support</a>
+                    <a href="#">Delivery Details</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+
+                <div class="footer-section" style="text-align: center;">
+                    <h4>FAQ</h4>
+                    <a href="#">Account</a>
+                    <a href="#">Manage Deliveries</a>
+                    <a href="#">Orders</a>
+                    <a href="#">Payments</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><img src="instagram.jpg" alt="Twitter"></a>
+                    <a href="#"><img src="fb.jpg" alt="Facebook"></a>
+                    <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+                    <a href="#"><img src="githubsymbol.jpg" alt="Github"></a>
+                </div>
+            </footer>
+            <div class="footer" style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <p>The Art Mela © 2024-2025, All Rights Reserved</p>
+                </div>
+                <div class="payment-icons">
+                    <img src="esewa.jpg" alt="eSewa" class="payment-img">
+                    <img src="khalti.jpg" alt="khalti" class="payment-img">
+                </div>
+            </div>
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art mela</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 1300px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .column {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+        }
+
+        .left {
+            background: #eaf4ff;
+        }
+
+        .right {
+            background: #ffffff
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        input::placeholder {
+            color: #aaa;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .left button {
+            background-color: white;
+            color: black;
+        }
+
+        .right button {
+            background-color: black;
+            color: white;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: #888;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px solid#ddd;
+        }
+
+        .divider::before {
+            margin-right: 10px;
+        }
+
+        .divider::after {
+            margin-left: 10px;
+        }
+
+        .google-btn {
+            background-color: white;
+            color: #4285f4;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .google-btn img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .right .google-btn {
+            background-color: white;
+            color: black;
+        }
+
+        .google-icon {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .form-toggle {
+            text-align: center;
+            margin-top: 20px;
+            color: #555;
+        }
+
+        .form-toggle a {
+            color: #4285f4;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .form-toggle a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<script src="https://kit.fontawesome.com/c56834982a.js" crossorigin="anonymous"></script>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <img src="logo.jpg" style="width:100%;height:100%;">
+            </div>
+            <a href="index.html">
+                <img src="New .png" style="margin-top: 2.5%;"> </img>
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="buy.html">Buy</a></li>
+                <li><a href="sell.html">Sell</a></li>
+                <li><a href="artist.html">Artist</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="icons">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <a href="index.html"><span class="cart-count">🛒</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <a href="/">Home</a>
+        <span>></span>
+        <a href="login/signup.html">Login/Sign Up</a>
+    </div>
+
+    <div class="container">
+        <div class="column left">
+            <div id="login-form">
+                <h1>Login</h1>
+                <br />
+                <div class="form-group">
+                    <label for="login-name">Full Name</label>
+                    <input type="text" id="login-name" name="fullname" placeholder="Enter your Full Name here" required>
+                </div>
+
+                <br />
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" name="password" placeholder="Enter your Password here"
+                        required>
+                </div>
+                <br>
+                <a href="index.html">
+                    <br /> <button id="signup-btn">Login</button></a>
+                <br />
+                <div class="divider">- OR -</div>
+
+                <button class="google-btn">
+                    <img src="googlelogoo.png" alt="Google logo" class="google-icon">
+                    Sign up with Google
+                </button>
+
+                <div class="form-toggle">
+                    Already have an account? <a id="show-signup">Sign up</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="column right">
+            <div id="signup-form">
+                <h1>Create your free Account</h1>
+
+                <div class="form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" name="fullname" placeholder="Enter your Full Name here"
+                        required>
+                </div>
+
+                <div class="form-group" style="display: flex; gap: 5px;">
+                    <label for="login-number" style="padding-top:2%;">Phone:</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter your Number here" style="flex: 1;"
+                        required>
+                    <label for="login-email" style="padding-top:2%;">Email:</label>
+                    <input type="email" id="signup-email" name="email" placeholder="Enter your Email here"
+                        style="flex: 1;" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-password">Password</label>
+                    <input type="password" id="signup-password" name="password" placeholder="Enter your Password here"
+                        required>
+                </div>
+
+                <div class="form-group">
+                    <label for="signup-artist">Are You An Artist?</label>
+                    <input type="text" id="signup-artist" name="are you an artist"
+                        placeholder="Type yes if you are a artist" required>
+                </div>
+                <a href="index.html">
+                    <br /> <button id="signup-btn">Create Account</button></a>
+
+                <br />
+                <div class="divider">- OR -</div>
+
+                <button class="google-btn">
+                    <img src="googlelogoo.png" alt="Google logo" class="google-icon">
+                    Sign up with Google
+                </button>
+
+                <div class="form-toggle">
+                    Already have an account? <a id="show-login">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            const showSignup = document.getElementById('show-signup');
+            const showLogin = document.getElementById('show-login');
+
+            showSignup.addEventListener('click', function () {
+                loginForm.classList.add('hidden');
+                signupForm.classList.remove('hidden');
+            });
+
+            showLogin.addEventListener('click', function () {
+                signupForm.classList.remove('hidden');
+                loginForm.classList.add('hidden');
+            });
+
+
+            document.getElementById('login-btn').addEventListener('click', function () {
+                const name = document.getElementById('login-name').value;
+                const password = document.getElementById('login-password').value;
+
+                if (!name || !password) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+                console.log('Login attempt:', { name, password });
+                alert('Login functionality would be implemented here');
+            });
+
+            document.getElementById('signup-btn').addEventListener('click', function () {
+                const name = document.getElementById('signup-name').value;
+                const phone = document.getElementById('signup-phone').value;
+                const email = document.getElementById('signup-email').value;
+                const password = document.getElementById('signup-password').value;
+                const isArtist = document.getElementById('signup-artist').value;
+
+                if (!name || !phone || !email || !password || !isArtist) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+
+
+                console.log('Signup attempt:', { name, phone, email, password, isArtist });
+                alert('Signup functionality would be implemented here');
+            });
+
+
+            const googleButtons = document.querySelectorAll('.google-btn');
+            googleButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    console.log('Google sign in clicked');
+                    alert('Google sign in would be implemented here');
+                });
+            });
+        });
+    </script>
+
+    <div class="newsletter">
+        <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+        <br />
+        <input type="email" placeholder="Enter your email address" style="width:200px;height: 30px;">
+        <br /><button style="height: 50px; width: 200px;">
+            <p style="font-size:14px;">Subscribe to Newsletter</p>
+            </style>
+        </button>
+    </div>
+
+    <footer>
+        <div class="footer-section">
+            <h4 style="margin:5px;">The Art Mela</h4>
+            <p>Explore our diverse collection of thoughtfully curated artworks, each piece designed to celebrate your
+                individuality and resonate with your unique sense of style.</p>
+        </div>
+        <div class="footer-section"style="text-align: center;">
+            <h4>PAGES</h4>
+            <a href="#">Buy</a>
+            <a href="#">Sell</a>
+            <a href="#">Artist</a>
+        </div>
+
+        <div class="footer-section" style="text-align: center;">
+            <h4>HELP</h4>
+            <a href="#">Customer Support</a>
+            <a href="#">Delivery Details</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <div class="footer-section" style="text-align: center;">
+            <h4>FAQ</h4>
+            <a href="#">Account</a>
+            <a href="#">Manage Deliveries</a>
+            <a href="#">Orders</a>
+            <a href="#">Payments</a>
+        </div>
+        <div class="social-icons">
+            <a href="#"><img src="instagram.jpg" alt="Twitter"></a>
+            <a href="#"><img src="fb.jpg" alt="Facebook"></a>
+            <a href="#"><img src="instagram.jpg" alt="Instagram"></a>
+            <a href="#"><img src="githubsymbol.jpg" alt="Github"></a>
+        </div>
+    </footer>
+    <div class="footer" style="display: flex; justify-content: space-between; align-items: center;">
+        <div>
+            <p>The Art Mela © 2024-2025, All Rights Reserved</p>
+        </div>
+        <div class="payment-icons">
+            <img src="esewa.jpg" alt="eSewa" class="payment-img">
+            <img src="khalti.jpg" alt="khalti" class="payment-img">
+        </div>
+    </div>
+    </body>
+    
+    </html>
